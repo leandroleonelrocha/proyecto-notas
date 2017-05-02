@@ -3,6 +3,7 @@
 angular.module('Client')
 	.controller('IndexNoteCtrl', function($scope, NoteResource, $location, $timeout) {
 		$scope.Notes = NoteResource.query();
+		console.log($scope.Notes)
 
 		$scope.removeNote = function(id) {
 			NoteResource.delete({
